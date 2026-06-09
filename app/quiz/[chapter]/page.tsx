@@ -92,54 +92,101 @@ function Quiz({ currentChapter }: { currentChapter: Chapter }) {
     window.location.href = "/training";
   }
 
+    const percent = Math.round(((currentChapter.id - 1) / chapters.length) * 100);
+
   return (
-    <main className="min-h-screen bg-neutral-50 px-4 py-10">
-      <div className="max-w-3xl mx-auto bg-white border rounded-2xl p-8 shadow-sm">
-        <p className="text-xs uppercase tracking-wide text-neutral-500 mb-2">
-          Chapter {currentChapter.id} of {chapters.length} Quiz
-        </p>
-
-        <h1 className="text-2xl font-semibold mb-6">{currentChapter.title}</h1>
-
-        <div className="space-y-8">
-          {currentChapter.questions.map((q, index) => (
-            <div key={index}>
-              <p className="text-sm font-medium mb-3">
-                {index + 1}. {q.question}
-              </p>
-
-              <div className="space-y-2">
-                {q.options.map((option) => (
-                  <label
-                    key={option}
-                    className="flex gap-2 text-sm border rounded-lg px-3 py-2 cursor-pointer"
-                  >
-                    <input
-                      type="radio"
-                      name={`question-${index}`}
-                      value={option}
-                      onChange={() =>
-                        setAnswers((prev) => ({
-                          ...prev,
-                          [index]: option,
-                        }))
-                      }
-                    />
-                    {option}
-                  </label>
-                ))}
-              </div>
-            </div>
-          ))}
+    <main className="min-h-screen bg-white text-black">
+      <div className="sticky top-0 z-20 border-b bg-white/95 backdrop-blur">
+        <div className="mx-auto max-w-3xl px-4 py-3">
+          <div className="mb-2 flex items-center justify-between text-xs font-medium text-black">
+            <span>Chapter {currentChapter.id} of {chapters.length}</span>
+            <span>{percent}% complete</span>
+          </div>
+          <div className="h-2 w-full rounded-full bg-neutral-200">
+            <div
+              className="h-2 rounded-full bg-black transition-all"
+              style={{ width: `${percent}%` }}
+            />
+          </div>
         </div>
+      </div>
 
-        <button
-          onClick={submitQuiz}
-          disabled={loading}
-          className="mt-8 bg-black text-white rounded-lg px-5 py-2 text-sm font-medium"
-        >
-          {loading ? "Submitting..." : "Submit Quiz"}
-        </button>
+      <div className="px-4 py-10">
+        <div className="mx-auto max-w-3xl rounded-2xl border border-neutral-200 bg-white p-8 shadow-sm">
+          <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-black">
+            Quiz
+          </p>
+
+          <h1 className="mb-8 text-3xl font-semibold tracking-tight text-black">
+            {currentChapter.title}
+          </h1>
+
+          <div className="space-y-6">
+            {currentChapter.questions.map((q, index) => (
+              <div
+                key={index}
+                className="rounded-2xl border border-neutral-200 bg-white p-5 shadow-sm"
+              >
+                <p className="mb-4 text-sm font-semibold leading-6 text-black">
+                  {index + 1}. {q.question}
+                </p>
+
+                <div className="space-y-3">
+                  {q.options.map((option) => {
+                    const selected = answers[index] === option;
+
+                    return (
+                      <label
+                        key={option}
+                        className={`flex cursor-pointer items-center gap-3 rounded-xl border px-4 py-3 text-sm font-medium transition ${
+                          selected
+                            ? "border-black bg-black text-white"
+                            : "border-neutral-300 bg-white text-black hover:border-black"
+                        }`}
+                      >
+                        <input
+                          type="radio"
+                          name={`question-${index}`}
+                          value={option}
+                          checked={selected}
+                          onChange={() =>
+                            setAnswers((prev) => ({
+                              ...prev,
+                              [index]: option,
+                            }))
+                          }
+                          className="sr-only"
+                        />
+
+                        <span
+                          className={`flex h-4 w-4 items-center justify-center rounded-full border ${
+                            selected
+                              ? "border-white bg-white"
+                              : "border-neutral-500 bg-white"
+                          }`}
+                        >
+                          {selected && (
+                            <span className="h-2 w-2 rounded-full bg-black" />
+                          )}
+                        </span>
+
+                        <span>{option}</span>
+                      </label>
+                    );
+                  })}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <button
+            onClick={submitQuiz}
+            disabled={loading}
+            className="mt-8 rounded-xl bg-black px-5 py-3 text-sm font-semibold text-white transition hover:bg-neutral-800 disabled:cursor-not-allowed disabled:opacity-60"
+          >
+            {loading ? "Submitting..." : "Submit Quiz"}
+          </button>
+        </div>
       </div>
     </main>
   );

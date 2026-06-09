@@ -34,34 +34,54 @@ export default function TrainingPage() {
   }, []);
 
   const chapter = chapters.find((c) => c.id === chapterNumber);
-
   if (!chapter) return null;
 
+  const percent = Math.round(((chapter.id - 1) / chapters.length) * 100);
+
   return (
-    <main className="min-h-screen bg-neutral-50 px-4 py-10">
-      <div className="max-w-3xl mx-auto bg-white border rounded-2xl p-8 shadow-sm">
-        <p className="text-xs uppercase tracking-wide text-neutral-500 mb-2">
-          Chapter {chapter.id} of {chapters.length}
-        </p>
-
-        <h1 className="text-2xl font-semibold mb-6">{chapter.title}</h1>
-
-        {lastScore && (
-          <div className="mb-6 rounded-lg border border-red-200 bg-red-50 p-4 text-sm text-red-700">
-            You scored {lastScore}. Please review this chapter and try again.
+    <main className="min-h-screen bg-white text-black">
+      <div className="sticky top-0 z-20 border-b bg-white/95 backdrop-blur">
+        <div className="mx-auto max-w-3xl px-4 py-3">
+          <div className="mb-2 flex items-center justify-between text-xs font-medium text-black">
+            <span>Chapter {chapter.id} of {chapters.length}</span>
+            <span>{percent}% complete</span>
           </div>
-        )}
-
-        <div className="prose prose-sm max-w-none text-neutral-800 whitespace-pre-line">
-          {chapter.content}
+          <div className="h-2 w-full rounded-full bg-neutral-200">
+            <div
+              className="h-2 rounded-full bg-black transition-all"
+              style={{ width: `${percent}%` }}
+            />
+          </div>
         </div>
+      </div>
 
-        <button
-          onClick={() => (window.location.href = `/quiz/${chapter.id}`)}
-          className="mt-8 bg-black text-white rounded-lg px-5 py-2 text-sm font-medium"
-        >
-          Start Chapter Quiz
-        </button>
+      <div className="px-4 py-10">
+        <div className="mx-auto max-w-3xl rounded-2xl border border-neutral-200 bg-white p-8 shadow-sm">
+          <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-black">
+            Reading
+          </p>
+
+          <h1 className="mb-6 text-3xl font-semibold tracking-tight text-black">
+            {chapter.title}
+          </h1>
+
+          {lastScore && (
+            <div className="mb-6 rounded-xl border border-red-300 bg-red-50 p-4 text-sm font-medium text-black">
+              You scored {lastScore}. Please review this chapter and try again.
+            </div>
+          )}
+
+          <div className="whitespace-pre-line text-sm leading-7 text-black">
+            {chapter.content}
+          </div>
+
+          <button
+            onClick={() => (window.location.href = `/quiz/${chapter.id}`)}
+            className="mt-8 rounded-xl bg-black px-5 py-3 text-sm font-semibold text-white transition hover:bg-neutral-800"
+          >
+            Start Chapter Quiz
+          </button>
+        </div>
       </div>
     </main>
   );
