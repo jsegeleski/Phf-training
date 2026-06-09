@@ -3,27 +3,34 @@ export const chapters = [
     id: 1,
     title: "Fueling 101: Why Athletes Need Carbohydrates",
     content: `
-When most people think about endurance sports, they think about fitness, training, or equipment. But one of the biggest factors affecting performance is fueling.
+## Why fueling matters
 
-When an athlete runs, rides, hikes, skis, or competes for a long period of time, their body needs energy. While the body can use both fat and carbohydrate as fuel, carbohydrate is the preferred fuel source during harder efforts because it can be turned into usable energy much more quickly.
+When most people think about endurance sports, they think about fitness, training, or equipment. But one of the biggest factors affecting performance is **fueling**.
 
-The body stores carbohydrate in the muscles and liver in the form of glycogen. You can think of glycogen as the body's readily available fuel tank. Unfortunately, that fuel tank is limited.
+When an athlete runs, rides, hikes, skis, or competes for a long period of time, their body needs energy. While the body can use both fat and carbohydrate as fuel, **carbohydrate is the preferred fuel source during harder efforts** because it can be turned into usable energy much more quickly.
 
-For many athletes, glycogen stores begin to become significantly depleted after roughly 90 to 120 minutes of hard exercise. When that happens, power output often drops, pace slows, and fatigue becomes much more noticeable.
+## Glycogen: the body's fuel tank
+
+The body stores carbohydrate in the muscles and liver in the form of **glycogen**. You can think of glycogen as the body's readily available fuel tank. Unfortunately, that fuel tank is limited.
+
+For many athletes, glycogen stores begin to become significantly depleted after roughly **90 to 120 minutes** of hard exercise. When that happens, power output often drops, pace slows, and fatigue becomes much more noticeable.
 
 This is why endurance athletes consume carbohydrates during exercise.
 
-One of the most important ideas from Precision Fuel & Hydration is that the amount of carbohydrate consumed is usually more important than the specific product used.
+## The PF&H fueling philosophy
+
+One of the most important ideas from Precision Fuel & Hydration is that **the amount of carbohydrate consumed is usually more important than the specific product used**.
 
 Many brands focus heavily on proprietary formulas and unique ingredients. While carbohydrate sources can matter, athletes should first answer two questions:
 
-How much carbohydrate do I need?
-
-What format is easiest for me to consume?
+1. **How much carbohydrate do I need?**
+2. **What format is easiest for me to consume?**
 
 Only after those questions are answered should they worry about the specific carbohydrate formulation.
 
-There has also been significant discussion in recent years around low-carb and ketogenic approaches to endurance performance. While some athletes have experimented successfully with these methods, the current body of evidence still strongly supports carbohydrate as the most effective fuel source for high-intensity endurance performance.
+## Carbohydrates and performance
+
+There has also been significant discussion in recent years around low-carb and ketogenic approaches to endurance performance. While some athletes have experimented successfully with these methods, the current body of evidence still strongly supports **carbohydrate as the most effective fuel source for high-intensity endurance performance**.
 
 This is why Precision Fuel & Hydration places such a strong emphasis on helping athletes understand their carbohydrate requirements.
 `,
@@ -69,33 +76,41 @@ This is why Precision Fuel & Hydration places such a strong emphasis on helping 
     id: 2,
     title: "How Much Fuel Do Athletes Actually Need?",
     content: `
+## The big question
+
 Once an athlete understands that carbohydrates are important, the next question becomes:
 
-"How much should I consume?"
+**"How much should I consume?"**
 
-This is where many athletes make mistakes. In reality, most recreational endurance athletes tend to underfuel.
+This is where many athletes make mistakes. In reality, most recreational endurance athletes tend to **underfuel**.
 
 Research and real-world observations have led to a simple framework that works well for most athletes.
 
-For activities lasting less than one hour, carbohydrate intake is often unnecessary if the athlete starts well fueled.
+## Simple carb intake framework
 
-For activities lasting between one and two hours, athletes generally benefit from consuming approximately 30-60 grams of carbohydrate per hour.
+For activities lasting **less than one hour**, carbohydrate intake is often unnecessary if the athlete starts well fueled.
 
-For activities lasting more than two hours, carbohydrate intake often increases to 60-90 grams per hour.
+For activities lasting **between one and two hours**, athletes generally benefit from consuming approximately **30-60 grams of carbohydrate per hour**.
 
-For many years, 90g/hour was considered the practical upper limit for carbohydrate intake. However, modern elite endurance athletes have pushed those numbers significantly higher.
+For activities lasting **more than two hours**, carbohydrate intake often increases to **60-90 grams per hour**.
 
-Today it is increasingly common to see professional cyclists, Ironman athletes, and elite runners consuming 100-120g/hour or even more during major competitions.
+## Elite athletes and high-carb fueling
 
-This does not mean everyone should immediately try to consume these amounts.
+For many years, **90g/hour** was considered the practical upper limit for carbohydrate intake. However, modern elite endurance athletes have pushed those numbers significantly higher.
 
-Higher intake levels require significant gut training. Athletes must gradually teach their digestive systems to absorb and process large amounts of carbohydrate during exercise. Attempting to jump straight to 120g/hour often results in bloating, nausea, cramping, or other gastrointestinal issues.
+Today it is increasingly common to see professional cyclists, Ironman athletes, and elite runners consuming **100-120g/hour or even more** during major competitions.
+
+This does **not** mean everyone should immediately try to consume these amounts.
+
+## Gut training matters
+
+Higher intake levels require significant **gut training**. Athletes must gradually teach their digestive systems to absorb and process large amounts of carbohydrate during exercise. Attempting to jump straight to 120g/hour often results in bloating, nausea, cramping, or other gastrointestinal issues.
 
 However, evidence from elite sport continues to show that higher carbohydrate intakes can support higher performance levels when athletes are able to tolerate them.
 
-This is one area where sports nutrition continues to evolve. The trend over the last decade has generally been toward higher carbohydrate intake, not lower.
+This is one area where sports nutrition continues to evolve. The trend over the last decade has generally been toward **higher carbohydrate intake, not lower**.
 
-For most customers, the simple 30g, 60g, and 90g framework remains the best starting point.
+For most customers, the simple **30g, 60g, and 90g framework** remains the best starting point.
 `,
     questions: [
       {
@@ -139,31 +154,39 @@ For most customers, the simple 30g, 60g, and 90g framework remains the best star
     id: 3,
     title: "Hydration and Sodium",
     content: `
-Fueling and hydration are related, but they are not the same thing.
+## Fueling and hydration are different
+
+Fueling and hydration are related, but they are **not the same thing**.
 
 Carbohydrates provide energy. Hydration helps maintain blood volume, regulate body temperature, support muscle function, and sustain performance.
 
-When athletes exercise, they lose fluid through sweat. Along with that fluid, they also lose electrolytes. The most important electrolyte lost through sweat is sodium.
+When athletes exercise, they lose fluid through sweat. Along with that fluid, they also lose electrolytes. The most important electrolyte lost through sweat is **sodium**.
+
+## Why sodium matters
 
 Sodium plays a major role in maintaining fluid balance and helping the body absorb and retain water.
 
 One common mistake athletes make is focusing entirely on water replacement while ignoring sodium replacement.
 
-While drinking water is important, consuming large amounts of water without replacing sodium can dilute the concentration of sodium in the blood. In severe situations, this can contribute to a dangerous condition called hyponatremia.
+While drinking water is important, consuming large amounts of water without replacing sodium can dilute the concentration of sodium in the blood. In severe situations, this can contribute to a dangerous condition called **hyponatremia**.
+
+## Sweat rates vary a lot
 
 Athletes vary tremendously in how much sodium they lose through sweat.
 
-Some athletes lose only a few hundred milligrams of sodium per litre of sweat, while others can lose more than 2,000mg per litre.
+Some athletes lose only a few hundred milligrams of sodium per litre of sweat, while others can lose more than **2,000mg per litre**.
 
-Similarly, sweat rates vary dramatically. One athlete might lose half a litre per hour while another loses more than two litres per hour in hot conditions.
+Similarly, sweat rates vary dramatically. One athlete might lose **half a litre per hour** while another loses **more than two litres per hour** in hot conditions.
 
 Because of these differences, there is no perfect hydration recommendation that works for everyone.
+
+## Practical hydration guidance
 
 A practical approach is to encourage athletes to drink according to thirst, avoid excessive dehydration, and replace sodium during longer or hotter sessions where sweat losses become substantial.
 
 This is why Precision Fuel & Hydration offers hydration products with different sodium strengths.
 
-The goal is not simply to drink more. The goal is to replace enough fluid and sodium to support performance.
+The goal is not simply to drink more. The goal is to replace enough **fluid and sodium** to support performance.
 `,
     questions: [
       {
@@ -207,21 +230,35 @@ The goal is not simply to drink more. The goal is to replace enough fluid and so
     id: 4,
     title: "Understanding the PF&H Product Range",
     content: `
+## Product range overview
+
 Once staff understand fueling and hydration fundamentals, the products become much easier to explain.
 
-The PF 90 Gel is designed for athletes who need a large amount of carbohydrate in a compact package. Each pouch contains 90g of carbohydrate and uses a 2:1 glucose-to-fructose ratio to support carbohydrate absorption. It does not contain electrolytes because PF&H prefers athletes to manage fueling and hydration separately.
+## PF 90 Gel
 
-The PF 30 Chews provide 30g of carbohydrate per pack. They are often chosen by athletes who want something more satisfying than a gel or who experience flavour fatigue during long events.
+The **PF 90 Gel** is designed for athletes who need a large amount of carbohydrate in a compact package. Each pouch contains **90g of carbohydrate** and uses a **2:1 glucose-to-fructose ratio** to support carbohydrate absorption.
 
-The PH hydration range focuses on sodium replacement.
+It does **not** contain electrolytes because PF&H prefers athletes to manage fueling and hydration separately.
 
-PH 500 provides moderate sodium replacement.
+## PF 30 Chews
 
-PH 1000 provides stronger sodium replacement.
+The **PF 30 Chews** provide **30g of carbohydrate per pack**. They are often chosen by athletes who want something more satisfying than a gel or who experience flavour fatigue during long events.
 
-PH 1500 is the strongest option and is commonly used by athletes who lose large amounts of sodium through sweat or who want to start exercise well hydrated.
+## PH hydration range
 
-Electrolyte Capsules provide 250mg of sodium per capsule and are useful when athletes prefer plain water or when carrying drink mixes is impractical.
+The PH hydration range focuses on **sodium replacement**.
+
+**PH 500** provides moderate sodium replacement.
+
+**PH 1000** provides stronger sodium replacement.
+
+**PH 1500** is the strongest option and is commonly used by athletes who lose large amounts of sodium through sweat or who want to start exercise well hydrated.
+
+## Electrolyte Capsules
+
+**Electrolyte Capsules** provide **250mg of sodium per capsule** and are useful when athletes prefer plain water or when carrying drink mixes is impractical.
+
+## Separating fuel from hydration
 
 One of the most important product concepts in the PF&H system is that fueling and hydration are often separated.
 
@@ -272,9 +309,11 @@ This flexibility is one of the major reasons endurance athletes have increasingl
     id: 5,
     title: "Putting It All Together: Helping Customers Find The Right Solution",
     content: `
+## The big picture
+
 By now, you should understand the basic philosophy behind Precision Fuel & Hydration.
 
-The most important takeaway is that there is no single perfect fueling strategy that works for everyone.
+The most important takeaway is that there is **no single perfect fueling strategy** that works for everyone.
 
 Every athlete is different.
 
@@ -282,39 +321,39 @@ Some athletes sweat heavily while others barely sweat at all. Some lose very lar
 
 Because of these differences, the role of a staff member is not to tell customers what they must use. Instead, your job is to help them understand their needs and guide them toward a solution.
 
+## A simple customer framework
+
 A simple framework is:
 
-1. How long is the activity?
+1. **How long is the activity?**  
+   This helps estimate carbohydrate requirements.
 
-This helps estimate carbohydrate requirements.
+2. **How hard is the activity?**  
+   Higher intensities generally increase carbohydrate needs.
 
-2. How hard is the activity?
+3. **Is hydration likely to be a major concern?**  
+   Hot weather, long duration, and heavy sweating increase fluid and sodium requirements.
 
-Higher intensities generally increase carbohydrate needs.
-
-3. Is hydration likely to be a major concern?
-
-Hot weather, long duration, and heavy sweating increase fluid and sodium requirements.
-
-4. What products does the athlete actually enjoy using?
-
-The best fueling plan is one the athlete can consistently follow.
+4. **What products does the athlete actually enjoy using?**  
+   The best fueling plan is one the athlete can consistently follow.
 
 A customer preparing for a 60-minute run will have very different needs than someone preparing for a 5-hour bike ride or an Ironman.
 
 In many cases, the simplest recommendation is the best one.
 
-For example, a customer doing a 90-minute run might benefit from one or two servings of carbohydrate and some hydration.
+## Example recommendations
 
-A customer doing a 4-hour ride might need 60-90g of carbohydrate per hour, along with a hydration plan that includes sodium replacement.
+A customer doing a **90-minute run** might benefit from one or two servings of carbohydrate and some hydration.
 
-A customer who dislikes gels might prefer chews.
+A customer doing a **4-hour ride** might need **60-90g of carbohydrate per hour**, along with a hydration plan that includes sodium replacement.
 
-A customer who prefers plain water might benefit from electrolyte capsules.
+A customer who dislikes gels might prefer **chews**.
+
+A customer who prefers plain water might benefit from **electrolyte capsules**.
 
 The goal is always to match the product to the athlete's needs.
 
-Product Quality & Dietary Information
+## Product Quality & Dietary Information
 
 Another common topic customers ask about is ingredients and dietary restrictions.
 
@@ -324,49 +363,84 @@ The products focus on delivering carbohydrates, fluids, and electrolytes without
 
 The PF products carried in our store are generally suitable for a wide range of athletes and dietary preferences.
 
-PF 90 Gel
+### PF 90 Gel
 
-The PF 90 Gel is vegan, vegetarian, gluten free, dairy free, wheat free, peanut free, tree nut free, soy free, egg free, fish free, crustacean free, mollusc free, sesame free, and sulphite free.
+The **PF 90 Gel** is:
 
-PF 30 Chews
+- Vegan
+- Vegetarian
+- Gluten free
+- Dairy free
+- Wheat free
+- Peanut free
+- Tree nut free
+- Soy free
+- Egg free
+- Fish free
+- Crustacean free
+- Mollusc free
+- Sesame free
+- Sulphite free
 
-The PF 30 Chews are vegan, vegetarian, gluten free, dairy free, wheat free, peanut free, soy free, and egg free.
+### PF 30 Chews
 
-PF 30 Chews are produced in facilities that handle some allergens, so trace contamination is possible.
+The **PF 30 Chews** are:
 
-PH Drink Mixes
+- Vegan
+- Vegetarian
+- Gluten free*
+- Dairy free*
+- Wheat free*
+- Peanut free
+- Soy free
+- Egg free
 
-PH 500, PH 1000, and PH 1500 are vegan, gluten free, dairy free, free from artificial ingredients, and Informed Sport Certified.
+\*Produced in facilities that handle some allergens, so trace contamination is possible.
 
-Electrolyte Capsules
+### PH Drink Mixes
 
-The Electrolyte Capsules are vegan, vegetarian, gluten free, dairy free, wheat free, peanut free, tree nut free, soy free, and egg free.
+**PH 500, PH 1000, and PH 1500** are:
+
+- Vegan
+- Gluten free
+- Dairy free
+- Free from artificial ingredients
+- Informed Sport Certified
+
+### Electrolyte Capsules
+
+The **Electrolyte Capsules** are:
+
+- Vegan
+- Vegetarian
+- Gluten free
+- Dairy free
+- Wheat free
+- Peanut free
+- Tree nut free
+- Soy free
+- Egg free
 
 These certifications and dietary accommodations make PF&H products accessible to a very broad range of customers.
 
-Key Takeaways
+## Key Takeaways
 
 If you remember nothing else from this training, remember these five points:
 
-1. Carbohydrates fuel performance.
+1. **Carbohydrates fuel performance.**  
+   The amount of carbohydrate consumed is usually more important than the specific product.
 
-The amount of carbohydrate consumed is usually more important than the specific product.
+2. **Duration matters.**  
+   A longer event generally requires more carbohydrate.
 
-2. Duration matters.
+3. **Hydration and fueling are different.**  
+   Carbohydrates provide energy. Fluids and sodium support hydration.
 
-A longer event generally requires more carbohydrate.
+4. **Sodium matters.**  
+   Athletes lose sodium through sweat, and replacement becomes increasingly important as sweat losses increase.
 
-3. Hydration and fueling are different.
-
-Carbohydrates provide energy. Fluids and sodium support hydration.
-
-4. Sodium matters.
-
-Athletes lose sodium through sweat, and replacement becomes increasingly important as sweat losses increase.
-
-5. There is no universal solution.
-
-The best plan depends on the athlete, the activity, the environment, and personal preference.
+5. **There is no universal solution.**  
+   The best plan depends on the athlete, the activity, the environment, and personal preference.
 `,
     questions: [
       {

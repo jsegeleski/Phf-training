@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { chapters } from "@/lib/course";
 import { supabase } from "@/lib/supabase";
+import ReactMarkdown from "react-markdown";
 
 export default function TrainingPage() {
   const [chapterNumber, setChapterNumber] = useState(1);
@@ -71,9 +72,9 @@ export default function TrainingPage() {
             </div>
           )}
 
-          <div className="whitespace-pre-line text-sm leading-7 text-black">
-            {chapter.content}
-          </div>
+          <div className="prose prose-neutral max-w-none prose-sm text-black prose-p:text-black prose-headings:text-black prose-strong:text-black prose-li:text-black">
+  <ReactMarkdown>{chapter.content}</ReactMarkdown>
+</div>
 
           <button
             onClick={() => (window.location.href = `/quiz/${chapter.id}`)}
