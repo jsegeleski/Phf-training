@@ -15,21 +15,31 @@ export default function QuizPage({
   const [answers, setAnswers] = useState<Record<number, string>>({});
   const [loading, setLoading] = useState(false);
 
-  if (!chapter) return null;
+  if (!chapter) {
+  return (
+    <main className="min-h-screen bg-neutral-50 flex items-center justify-center px-4">
+      <div className="bg-white border rounded-2xl p-8 shadow-sm">
+        <p className="text-sm text-neutral-600">Chapter not found.</p>
+      </div>
+    </main>
+  );
+}
 
   async function submitQuiz() {
-    const sessionId = localStorage.getItem("pfh_session_id");
+  if (!chapter) return;
 
-    if (!sessionId) {
-      window.location.href = "/";
-      return;
-    }
+  const sessionId = localStorage.getItem("pfh_session_id");
 
-    let score = 0;
+  if (!sessionId) {
+    window.location.href = "/";
+    return;
+  }
 
-    chapter.questions.forEach((q, index) => {
-      if (answers[index] === q.answer) score++;
-    });
+  let score = 0;
+
+  chapter.questions.forEach((q, index) => {
+    if (answers[index] === q.answer) score++;
+  });
 
     const total = chapter.questions.length;
     const passed = score === total;
