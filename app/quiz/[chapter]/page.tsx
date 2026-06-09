@@ -1,21 +1,27 @@
 "use client";
 
+import { useParams } from "next/navigation";
 import { useState } from "react";
 import { chapters } from "@/lib/course";
 import { supabase } from "@/lib/supabase";
 
 type Chapter = (typeof chapters)[number];
 
-export default function QuizPage({
-  params,
-}: {
-  params: { chapter: string };
-}) {
+export default function QuizPage() {
+  const params = useParams();
   const chapterId = Number(params.chapter);
   const currentChapter = chapters.find((c) => c.id === chapterId);
 
   if (!currentChapter) {
-    return <div className="p-8 text-sm">Chapter not found.</div>;
+    return (
+      <main className="min-h-screen bg-neutral-50 flex items-center justify-center px-4">
+        <div className="bg-white border rounded-2xl p-8 shadow-sm">
+          <p className="text-sm text-neutral-600">
+            Chapter not found. Chapter ID: {String(params.chapter)}
+          </p>
+        </div>
+      </main>
+    );
   }
 
   return <Quiz currentChapter={currentChapter} />;
@@ -26,18 +32,18 @@ function Quiz({ currentChapter }: { currentChapter: Chapter }) {
   const [loading, setLoading] = useState(false);
 
   async function submitQuiz() {
-    let score = 0;
-
-    currentChapter.questions.forEach((q, index) => {
-      if (answers[index] === q.answer) score++;
-    });
-
     const sessionId = localStorage.getItem("pfh_session_id");
 
     if (!sessionId) {
       window.location.href = "/";
       return;
     }
+
+    let score = 0;
+
+    currentChapter.questions.forEach((q, index) => {
+      if (answers[index] === q.answer) score++;
+    });
 
     const total = currentChapter.questions.length;
     const passed = score === total;
