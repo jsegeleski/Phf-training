@@ -72,8 +72,44 @@ export default function TrainingPage() {
             </div>
           )}
 
-          <div className="prose prose-neutral max-w-none prose-sm text-black prose-p:text-black prose-headings:text-black prose-strong:text-black prose-li:text-black">
-  <ReactMarkdown>{chapter.content}</ReactMarkdown>
+          <div className="text-black">
+  <ReactMarkdown
+    components={{
+      h2: ({ children }) => (
+        <h2 className="mt-10 mb-4 text-xl font-bold text-black">
+          {children}
+        </h2>
+      ),
+      h3: ({ children }) => (
+        <h3 className="mt-8 mb-3 text-base font-bold text-black">
+          {children}
+        </h3>
+      ),
+      p: ({ children }) => (
+        <p className="mb-5 text-sm leading-7 text-black">
+          {children}
+        </p>
+      ),
+      strong: ({ children }) => (
+        <strong className="font-bold text-black">{children}</strong>
+      ),
+      ul: ({ children }) => (
+        <ul className="mb-5 ml-6 list-disc space-y-2 text-sm text-black">
+          {children}
+        </ul>
+      ),
+      ol: ({ children }) => (
+        <ol className="mb-5 ml-6 list-decimal space-y-2 text-sm text-black">
+          {children}
+        </ol>
+      ),
+      li: ({ children }) => (
+        <li className="leading-7 text-black">{children}</li>
+      ),
+    }}
+  >
+    {chapter.content}
+  </ReactMarkdown>
 </div>
 
           <button

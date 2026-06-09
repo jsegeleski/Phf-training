@@ -23,8 +23,8 @@ One of the most important ideas from Precision Fuel & Hydration is that **the am
 
 Many brands focus heavily on proprietary formulas and unique ingredients. While carbohydrate sources can matter, athletes should first answer two questions:
 
-1. **How much carbohydrate do I need?**
-2. **What format is easiest for me to consume?**
+1. How much carbohydrate do I need?
+2. What format is easiest for me to consume?
 
 Only after those questions are answered should they worry about the specific carbohydrate formulation.
 
