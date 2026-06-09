@@ -5,11 +5,7 @@ export const chapters = [
     content: `
 When most people think about endurance sports, they think about fitness, training, or equipment. But one of the biggest factors affecting performance is fueling.
 
-When an athlete runs, rides, hikes, skis, or competes for a long period of time, their body needs energy. While the body can use both fat and carbohydrate as fuel, carbohydrate is the preferred fuel source during harder efforts because it can be turned into usable energy much more quickly.
-
-The body stores carbohydrate in the muscles and liver in the form of glycogen. You can think of glycogen as the body's readily available fuel tank. Unfortunately, that fuel tank is limited.
-
-For many athletes, glycogen stores begin to become significantly depleted after roughly 90 to 120 minutes of hard exercise. When that happens, power output often drops, pace slows, and fatigue becomes much more noticeable.
+When an athlete runs, rides, hikes, skis, or competes for a long period of time, their body needs energy. While the body can use both fat and carbohydrate as fuel, carbohydrate is the preferred fuel source during harder efforts.
 
 This is why endurance athletes consume carbohydrates during exercise.
 `,
@@ -23,6 +19,31 @@ This is why endurance athletes consume carbohydrates during exercise.
           "To improve balance",
         ],
         answer: "To replace energy being used during exercise",
+      },
+      {
+        question: "What form does the body store carbohydrate as?",
+        options: ["Protein", "Sodium", "Glycogen", "Fibre"],
+        answer: "Glycogen",
+      },
+      {
+        question: "Roughly when do glycogen stores become a limiting factor during hard exercise?",
+        options: ["10 minutes", "30 minutes", "90-120 minutes", "8 hours"],
+        answer: "90-120 minutes",
+      },
+      {
+        question: "What matters most when planning fuel?",
+        options: [
+          "Product flavour",
+          "Brand name",
+          "Total carbohydrate intake",
+          "Packaging",
+        ],
+        answer: "Total carbohydrate intake",
+      },
+      {
+        question: "Current evidence supports carbohydrate as a key fuel for hard endurance performance.",
+        options: ["True", "False"],
+        answer: "True",
       },
     ],
   },
