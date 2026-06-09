@@ -4,94 +4,94 @@ import { useState } from "react";
 import { chapters } from "@/lib/course";
 import { supabase } from "@/lib/supabase";
 
+type Chapter = (typeof chapters)[number];
+
 export default function QuizPage({
   params,
 }: {
   params: { chapter: string };
 }) {
   const chapterId = Number(params.chapter);
-  const chapter = chapters.find((c) => c.id === chapterId);
+  const currentChapter = chapters.find((c) => c.id === chapterId);
 
+  if (!currentChapter) {
+    return <div className="p-8 text-sm">Chapter not found.</div>;
+  }
+
+  return <Quiz currentChapter={currentChapter} />;
+}
+
+function Quiz({ currentChapter }: { currentChapter: Chapter }) {
   const [answers, setAnswers] = useState<Record<number, string>>({});
   const [loading, setLoading] = useState(false);
 
-  if (!chapter) {
-  return (
-    <main className="min-h-screen bg-neutral-50 flex items-center justify-center px-4">
-      <div className="bg-white border rounded-2xl p-8 shadow-sm">
-        <p className="text-sm text-neutral-600">Chapter not found.</p>
-      </div>
-    </main>
-  );
-}
-
   async function submitQuiz() {
-  if (!chapter) return;
+    let score = 0;
 
-  const sessionId = localStorage.getItem("pfh_session_id");
+    currentChapter.questions.forEach((q, index) => {
+      if (answers[index] === q.answer) score++;
+    });
 
-  if (!sessionId) {
-    window.location.href = "/";
-    return;
-  }
+    const sessionId = localStorage.getItem("pfh_session_id");
 
-  let score = 0;
+    if (!sessionId) {
+      window.location.href = "/";
+      return;
+    }
 
-  chapter.questions.forEach((q, index) => {
-    if (answers[index] === q.answer) score++;
-  });
-
-    const total = chapter.questions.length;
+    const total = currentChapter.questions.length;
     const passed = score === total;
 
     setLoading(true);
 
     await supabase.from("chapter_attempts").insert({
       session_id: sessionId,
-      chapter_number: chapter.id,
+      chapter_number: currentChapter.id,
       score,
       total,
       passed,
     });
 
-    if (passed) {
-      const nextChapter = chapter.id + 1;
-
-      if (nextChapter > chapters.length) {
-        await supabase
-          .from("staff_sessions")
-          .update({
-            completed: true,
-            completed_at: new Date().toISOString(),
-          })
-          .eq("id", sessionId);
-
-        window.location.href = "/complete";
-      } else {
-        await supabase
-          .from("staff_sessions")
-          .update({ current_chapter: nextChapter })
-          .eq("id", sessionId);
-
-        window.location.href = "/training";
-      }
-    } else {
+    if (!passed) {
       localStorage.setItem("pfh_last_score", `${score}/${total}`);
       window.location.href = "/training";
+      return;
     }
+
+    const nextChapter = currentChapter.id + 1;
+
+    if (nextChapter > chapters.length) {
+      await supabase
+        .from("staff_sessions")
+        .update({
+          completed: true,
+          completed_at: new Date().toISOString(),
+        })
+        .eq("id", sessionId);
+
+      window.location.href = "/complete";
+      return;
+    }
+
+    await supabase
+      .from("staff_sessions")
+      .update({ current_chapter: nextChapter })
+      .eq("id", sessionId);
+
+    window.location.href = "/training";
   }
 
   return (
     <main className="min-h-screen bg-neutral-50 px-4 py-10">
       <div className="max-w-3xl mx-auto bg-white border rounded-2xl p-8 shadow-sm">
         <p className="text-xs uppercase tracking-wide text-neutral-500 mb-2">
-          Chapter {chapter.id} Quiz
+          Chapter {currentChapter.id} Quiz
         </p>
 
-        <h1 className="text-2xl font-semibold mb-6">{chapter.title}</h1>
+        <h1 className="text-2xl font-semibold mb-6">{currentChapter.title}</h1>
 
         <div className="space-y-8">
-          {chapter.questions.map((q, index) => (
+          {currentChapter.questions.map((q, index) => (
             <div key={index}>
               <p className="text-sm font-medium mb-3">
                 {index + 1}. {q.question}
@@ -108,7 +108,10 @@ export default function QuizPage({
                       name={`question-${index}`}
                       value={option}
                       onChange={() =>
-                        setAnswers((prev) => ({ ...prev, [index]: option }))
+                        setAnswers((prev) => ({
+                          ...prev,
+                          [index]: option,
+                        }))
                       }
                     />
                     {option}
