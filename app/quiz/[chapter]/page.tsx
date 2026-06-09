@@ -32,14 +32,19 @@ function Quiz({ currentChapter }: { currentChapter: Chapter }) {
   const [loading, setLoading] = useState(false);
 
   async function submitQuiz() {
-    const sessionId = localStorage.getItem("pfh_session_id");
+  const sessionId = localStorage.getItem("pfh_session_id");
 
-    if (!sessionId) {
-      window.location.href = "/";
-      return;
-    }
+  if (!sessionId) {
+    window.location.href = "/";
+    return;
+  }
 
-    let score = 0;
+  if (Object.keys(answers).length < currentChapter.questions.length) {
+    alert("Please answer every question before submitting.");
+    return;
+  }
+
+  let score = 0;
 
     currentChapter.questions.forEach((q, index) => {
       if (answers[index] === q.answer) score++;
@@ -91,7 +96,7 @@ function Quiz({ currentChapter }: { currentChapter: Chapter }) {
     <main className="min-h-screen bg-neutral-50 px-4 py-10">
       <div className="max-w-3xl mx-auto bg-white border rounded-2xl p-8 shadow-sm">
         <p className="text-xs uppercase tracking-wide text-neutral-500 mb-2">
-          Chapter {currentChapter.id} Quiz
+          Chapter {currentChapter.id} of {chapters.length} Quiz
         </p>
 
         <h1 className="text-2xl font-semibold mb-6">{currentChapter.title}</h1>
