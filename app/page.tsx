@@ -29,31 +29,35 @@ export default function Home() {
   }
 
   return (
-    <main className="min-h-screen bg-neutral-50 flex items-center justify-center px-4">
-      <div className="w-full max-w-md bg-white border rounded-2xl p-8 shadow-sm">
-        <h1 className="text-2xl font-semibold mb-2">
-          Precision Fuel & Hydration Training
-        </h1>
+  <main className="min-h-screen bg-white text-black flex items-center justify-center px-4">
+    <div className="w-full max-w-md rounded-2xl border border-neutral-200 bg-white p-8 shadow-sm">
+      <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-black">
+        Staff Training
+      </p>
 
-        <p className="text-sm text-neutral-600 mb-6">
-          Enter your name to begin the staff product training.
-        </p>
+      <h1 className="mb-3 text-3xl font-semibold tracking-tight text-black">
+        Precision Fuel & Hydration Training
+      </h1>
 
-        <input
-          className="w-full border rounded-lg px-3 py-2 text-sm mb-4"
-          placeholder="Your name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
+      <p className="mb-6 text-sm leading-6 text-black">
+        Enter your name to begin the staff product training.
+      </p>
 
-        <button
-          onClick={startTraining}
-          disabled={loading}
-          className="w-full bg-black text-white rounded-lg py-2 text-sm font-medium"
-        >
-          {loading ? "Starting..." : "Start Training"}
-        </button>
-      </div>
-    </main>
-  );
+      <input
+        className="mb-4 w-full rounded-xl border border-neutral-300 bg-white px-4 py-3 text-sm text-black placeholder:text-neutral-500 focus:border-black focus:outline-none"
+        placeholder="Your name"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+      />
+
+      <button
+        onClick={startTraining}
+        disabled={loading}
+        className="w-full rounded-xl bg-black py-3 text-sm font-semibold text-white transition hover:bg-neutral-800 disabled:cursor-not-allowed disabled:opacity-60"
+      >
+        {loading ? "Starting..." : "Start Training"}
+      </button>
+    </div>
+  </main>
+);
 }
